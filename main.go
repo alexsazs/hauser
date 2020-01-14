@@ -1,7 +1,6 @@
 package main
 
 import (
-	"compress/gzip"
 	"compress/zlib"
 	"encoding/csv"
 	"encoding/json"
