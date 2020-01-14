@@ -2,6 +2,7 @@ package main
 
 import (
 	"compress/gzip"
+	"compress/zlib"
 	"encoding/csv"
 	"encoding/json"
 	"flag"
@@ -284,9 +285,9 @@ func WriteBundleToCSV(fs *fullstory.Client, bundleID int, tableColumns []string,
 	}
 	defer stream.Close()
 
-	gzstream, err := gzip.NewReader(stream)
+	gzstream, err := zlib.NewReader(stream)
 	if err != nil {
-		log.Printf("Failed gzip reader: %s", err)
+		log.Printf("Failed zlib reader: %s", err)
 		return 0, err
 	}
 
@@ -340,9 +341,9 @@ func WriteBundleToJson(fs *fullstory.Client, bundleID int, filename string) (byt
 	}
 	defer outfile.Close()
 
-	gzstream, err := gzip.NewReader(stream)
+	gzstream, err := zlib.NewReader(stream)
 	if err != nil {
-		log.Printf("Failed gzip reader: %s", err)
+		log.Printf("Failed zlib reader: %s", err)
 		return 0, err
 	}
 	defer gzstream.Close()
