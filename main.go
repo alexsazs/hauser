@@ -14,8 +14,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fullstorydev/hauser/config"
-	"github.com/fullstorydev/hauser/warehouse"
+	"github.com/alexsazs/hauser/config"
+	"github.com/alexsazs/hauser/warehouse"
 	"github.com/nishanths/fullstory"
 	"github.com/pkg/errors"
 )
