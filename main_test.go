@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/fullstorydev/hauser/warehouse"
+	"github.com/alexsazs/hauser/warehouse"
 	"github.com/nishanths/fullstory"
 	"github.com/pkg/errors"
 )
